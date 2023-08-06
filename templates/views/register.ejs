@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("/register/slide-ecommerce.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+ 
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0,0,0, 0.6);
+    box-shadow: inset 120px 100px 250px black; 
+}
+
+img { 
+    height: 8em;
+    weight: 8em;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    /* background: rgba(87, 185, 218, 0.829); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+
+}
+
+.navigation a,i {
+    position: relative;
+    z-index: 2;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .2s;
+    transform-origin: center;
+}
+
+.navigation a:hover::after {
+    transform: scaleX(1);
+    transform-origin:center;
+}
+
+.navigation .btnLogin-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.navigation .btnLogin-popup:hover {
+    background: #fff;
+    color: #162938;
+
+}
+
+::-webkit-scrollbar {
+    width:.001rem;
+}
+
+.wrapper {
+    color: #fff;
+    z-index: 2;
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0,0,0, 0.5);
+    backdrop-filter: blur(50px);
+    display: flex;
+    justufy-content: center;
+    align-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;
+    
+}
+
+.wrapper.active-popup {
+    transform: scale(1);
+}
+
+.wrapper .active {
+    height: 520px;
+}
+
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+/* .wrapper .form-box.login {
+    display: none;
+} */
+
+
+.wrapper .form-box.login {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper.active .form-box.login {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.wrapper .form-box.register {
+    padding-top: 20em;
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.wrapper.active .form-box.register {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+/* .wrapper1 {
+    display: table;
+} */
+
+.wrapper .icon-close { 
+    position: absolute;
+    /* display: table-cell; */
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: rgb(219, 64, 64);
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: right;
+    /* align-items: right; */
+    /* vertical-align:middle;  */
+    /* text-align: center; */
+    /* overflow: hidden; */
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.icon-close i {
+    /* top : .1%; */
+    position: absolute;
+    transform: translate(-45%, 18%);
+}
+
+.wrapper a {
+    color: grey;
+    z-index: 3;
+}
+
+.wrapper a:hover {
+    color: rgb(221, 185, 118);
+}
+
+.form-box h2 {
+   /*  color: #fff; */
+    font-size: 2em;
+    text-align: center;
+}
+
+.input-box, .input-box-2 {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+}
+
+.input-box label, .input-box-2 label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.1s;
+}
+
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+}
+
+.input-box-2 input:focus~label,
+.input-box-2 input:valid~label {
+    top: -5px;
+}
+.input-box input, .input-box-2 input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none; 
+    font-size: 1em;
+    color: grey;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.wrapper .input-box .icon, .wrapper .input-box-2 .icon {
+    position: absolute;
+    right: 20px;
+    font-size: 1.2em;
+    color: grey;
+    line-height: 57px;
+}
+
+.remember-forgot {
+    font-size: .9em;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: rgb(219, 64, 64);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color:#fff;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.login-register {
+    font-size: .9em;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <!-- <link rel="stylesheet" href="shopping.css"> -->
+</head>
+<body>
+    <header>
+       <!--  <h2 class = "logo">Logo</h2> -->
+       <img src="/register/image.png" alt="Logo" style = "height: 80px; width:80px"  >
+        <nav class = "navigation">
+            <a class="active" href="home.ejs">Home</a>
+            <a class = "active" href="shop.ejs">Shop</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <button class = "btnLogin-popup">Login</button>
+        </nav>
+    </header>
+    <div class = "wrapper">
+        <div class = "icon-close">
+        <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form class="form-signin" action="/login" method="POST">
+                <div class = "input-box">
+                    <div class = "icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                    <input type = "email" placeholder="email" required name="email">
+                    <label >Email</label>
+                </div>
+                <div class = "input-box">
+                    <div class = "icon">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                    <input type = "password" placeholder="password" required name="password">
+                    <label >Password</label>
+                </div>
+                <div class = "remember-forgot">
+                    <label>
+                        <input type = "checkbox">
+                        Remember me
+                    </label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type = "submit" class = "btn">Login </button>
+            <div class="login-register">
+                <p> Don't have an account?
+                    <a href="#" class = "register-link">Register</a>
+                </p>
+            </div>
+            </form>
+        </div>
+
+
+
+        <div class="form-box register">
+            <h2>Registration</h2>
+            <form action="/register" method="post">
+                <div class = "input-box-2">
+                    <span class = "icon">
+                    <i class="fa-solid fa-user"></i>
+                </span>                  
+                    <input type="text" id="username" name="username" required>
+                    <label >Username</label>
+                </div>
+                <div class = "input-box-2">
+                    <span class = "icon">
+                    <i class="fa-solid fa-user"></i>
+                </span>
+                     <input type="number" id="contact" name="contact" required>
+                     <label for="contact">Contact:</label>
+                </div>
+                <div class = "input-box-2">
+                    <span class = "icon">
+                    <i class="fa-sharp fa-solid fa-envelope"></i>
+                </span>
+                    <input type="email" id="email" name="email"  >
+                    <label for="email">Email:</label>
+                </div>
+                <div class = "input-box-2">
+                    <span class = "icon">
+                    <i class="fa-solid fa-user"></i>
+                </span>
+                    <input type="text" id="Address" name="Address" required>
+                    <label for="Address">Address:</label>
+                </div>
+                <div class = "input-box-2">
+                    <span class = "icon">
+                    <i class="fa-solid fa-lock"></i>
+                </span>                  
+                    <input type="password" id="password" name="password" >
+                    <label for="password">Password:</label>
+                </div>
+                <div class = "remember-forgot">
+                    <label>
+                        <input type = "checkbox">
+                     I agree to the terms and conditions
+                    </label>
+                </div>
+                <button type = "submit" class = "btn">Register</button>
+            <div class="login-register">
+                <p> Already have an account?
+                    <a href="#" class = "login-link" > Login</a>
+                </p>
+            </div>
+            </form>
+        </div>  
+    </div>
+    <script>
+        const wrapper = document.querySelector('.wrapper');
+const loginLink = document.querySelector('.login-link');
+const registerLink = document.querySelector('.register-link');
+const btnPopup = document.querySelector('.btnLogin-popup');
+const iconClose = document.querySelector('.icon-close');
+
+registerLink.addEventListener('click', () => {
+    wrapper.classList.add('active');
+});
+
+loginLink.addEventListener('click', ()=> {
+    wrapper.classList.remove('active');
+});
+
+btnPopup.addEventListener('click', ()=> {
+    wrapper.classList.add('active-popup');
+});
+
+iconClose.addEventListener('click', ()=> {
+    wrapper.classList.remove('active-popup');
+});
+    </script>
+</body>
+</html>
+
+
+<!-- {{!-- 
+ye mera code h isse disturb kara toh......
+{!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>User Registration</title>
+    <style>
+      /* CSS Style for the registration form */
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #f2f2f2;
+        border: 2px solid #333;
+        border-radius: 10px;
+        width: 400px;
+      }
+      label {
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+      input[type="text"],
+      input[type="number"],
+      input[type="email"],
+      input[type="password"] {
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: none;
+        width: 100%;
+      }
+      button {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #555;
+      }
+    </style>
+  </head> -->
+  <!-- <body>
+    <form action="/user" method="POST" >
+      <h1>User Registration</h1>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="contact">Contact:</label>
+      <input type="number" id="contact" name="contact" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"  >
+
+      <label for="Address">Address:</label>
+      <input type="text" id="Address" name="Address" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" >
+
+      <button type="submit">Register</button>
+    </form>
+  </body>
+</html> --} --}} -->

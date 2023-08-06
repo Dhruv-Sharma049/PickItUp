@@ -1,0 +1,1490 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PickItUp</title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'spartan',sans-serif;
+}
+
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+h4{
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p{
+    font-size: 16px;
+    color: #465b52;
+}
+
+
+.section-p1{
+    padding: 40px 80px;
+}
+
+.section-m1{
+    margin: 40px 0;
+}
+
+body{
+    width: 100%;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 80px;
+    background: #088178;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#logo{
+    height: 80px;
+    background-color: aqua;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease ;
+}
+
+#navbar li a:hover,
+#navbar li a.active{
+    color:  rgb(6, 10, 135);
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background:  rgb(6, 10, 135);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+/* Home page */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'spartan',sans-serif;
+}
+
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+h4{
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p{
+    font-size: 16px;
+    color: #465b52;
+}
+
+
+.section-p1{
+    padding: 40px 80px;
+}
+
+.section-m1{
+    margin: 40px 0;
+}
+
+body{
+    width: 100%;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 80px;
+    background: #93e5c5;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#logo{
+    height: 80px;
+    background-color: aqua;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s ease ;
+}
+
+#navbar li a:hover,
+#navbar li a.active{
+    color:  rgb(6, 10, 135);
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background:  rgb(6, 10, 135);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+/* Home page */
+
+#hero{
+    background-image: url();
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#hero h2{
+    padding-bottom:  15px ;
+    color:  rgb(6, 10, 135);
+}
+
+#hero button{
+    
+    /* correct the image */
+    background-image: url("button.png");
+    background-color: transparent;
+    color: #052cab;
+    border: 0;
+    padding: 14px 80px 14px 65px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+    
+}
+
+#feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#feature .fe-box{ 
+    width: 180px;
+    height: 180px;
+    padding: 25px 15;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    border: 1px solid #cce7d0;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+#feature .fe-box:hover{
+    box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+    /* box-shadow: 10px 10px 54px rgb(206, 249, 252); */
+}
+/* #feature .fe-box:nth-child(2){
+    border: 1px solid #c4173f;
+} */
+.fe-box img{
+    height: 100%;
+    width: 100%;
+}
+
+#product1{
+    text-align: center;
+}
+
+#product1 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px ;
+    flex-wrap: wrap;
+}
+#product1 .pro{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+#product1 .pro:hover{
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+#product1 .pro img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+#product1 .pro .des{
+    text-align: start;
+    padding: 10px 0;
+}
+
+#product1 .pro .des span{
+    color: #606063;
+    font-size: 12px;
+}
+
+#product1 .pro .des h5{
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+
+#product1 .pro .des i{
+    font-size: 12px;
+    color: rgb(243, 181, 25);
+}
+
+#product1 .pro .des h4{
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #088178;
+}
+
+#product .pro .cart{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #e8f6ea;
+    font-weight: 500;
+    color: #088178;
+    border: 1px solid #cce7d0;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+
+#banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("canva/bf.png");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+}
+
+button.normal{
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 30px;
+    margin-top: 140px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;  
+}
+
+button.white{
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 18px;
+    /* margin-top: 140px; */
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s;  
+}
+
+#banner button:hover{
+    background-color: #fffb00;
+    color: red;
+}
+
+#sm-banner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#sm-banner .banner-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("canva/b2.jpg");
+    min-width: 580px;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+}
+
+#sm-banner .banner-box2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("canva/b2.jpg");
+    min-width: 580px;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+}
+
+#sm-banner h4{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+}
+#sm-banner h2{
+    color: #fff;
+    font-size: 28px;
+    font-weight: 800;
+}
+#sm-banner span{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+
+#sm-banner .banner-box:hover button{
+    /* background: #088178; */
+    background: rgb(247, 9, 9);
+    border: 1px solid red;
+}
+
+#banner3{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 80px;
+}
+
+#banner3 .banner-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("canva/b2.jpg");
+    min-width: 30%;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+#banner3 .banner-box2{
+    background-image: url("canva/b2.jpg");
+}
+#banner3 .banner-box3{
+    background-image: url("canva/b2.jpg");
+}
+
+#banner3 h2{
+    color: #fff;
+    font-weight: 900;
+    font-size: 15px;
+}
+#banner3 h3{
+    color: #000000;
+    font-weight: 800;
+    font-size: 15px;
+}
+
+#newsletter{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    /* add dark image here */
+    background-image: url("canva/b.png"); 
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+    background-color: #041e42;
+}
+
+#newsletter h4{
+    font-weight: 22px;
+    font-weight: 700;
+    color: #fff;
+}
+#newsletter p{
+    font-weight: 22px;
+    font-weight: 600;
+    color: #818ea0;
+}
+
+#newsletter p span{
+    color: #ffbd27;
+}
+
+#newsletter .form{
+    display: flex;
+    width: 40%;
+}
+#newsletter input{
+    height: 3.125em;
+    padding: 0 1.25em;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#newsletter button{
+    background-color: #088178;
+    color: #fff;
+    white-space: nowrap;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+button.normal{
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 30px;
+    /* margin-top: 1px; */
+    /* margin-left: 1px; */
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;  
+}
+
+.footer-logo{
+    width: 13%;
+    height: 13%;
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer .footer-logo{
+    margin-bottom: 30px;
+}
+
+footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+footer p{
+    font-size: 13px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+ footer .follow{
+    margin-top: 20px;
+ }
+
+ footer .follow i{
+    color: #465b52;
+    padding-right: 4px;
+    cursor: pointer;
+ }
+
+ footer .install .row img{
+    border: 1px solid #088178;
+    border-radius: 6px;
+ }
+
+ footer .install img{
+    margin: 10px 0 15px 0;
+ }
+
+ footer .follow i:hover,
+ footer a:hover{
+    color: #088178;
+ }
+
+ footer .copyright{
+    width: 100%;
+    text-align: center;
+ }
+ 
+ #hero {
+    background-image: url("https://wallpaperboat.com/wp-content/uploads/2020/11/10/60057/shopping-33.jpg");
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#hero h2{
+    padding-bottom:  15px ;
+    color:  rgb(6, 10, 135);
+}
+
+#hero button{
+    
+    /* correct the image */
+    background-image: url("button.png");
+    background-color: transparent;
+    color: #052cab;
+    border: 0;
+    padding: 14px 80px 14px 65px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+    
+}
+
+#feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#feature .fe-box{ 
+    width: 180px;
+    height: 180px;
+    padding: 25px 15;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    border: 1px solid #cce7d0;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+#feature .fe-box:hover{
+    box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+    /* box-shadow: 10px 10px 54px rgb(206, 249, 252); */
+}
+/* #feature .fe-box:nth-child(2){
+    border: 1px solid #c4173f;
+} */
+.fe-box img{
+    height: 100%;
+    width: 100%;
+}
+
+#product1{
+    text-align: center;
+}
+
+#product1 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px ;
+    flex-wrap: wrap;
+}
+#product1 .pro{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+#product1 .pro:hover{
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+#product1 .pro img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+#product1 .pro .des{
+    text-align: start;
+    padding: 10px 0;
+}
+
+#product1 .pro .des span{
+    color: #606063;
+    font-size: 12px;
+}
+
+#product1 .pro .des h5{
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+
+#product1 .pro .des i{
+    font-size: 12px;
+    color: rgb(243, 181, 25);
+}
+
+#product1 .pro .des h4{
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #088178;
+}
+
+#product .pro .cart{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #e8f6ea;
+    font-weight: 500;
+    color: #088178;
+    border: 1px solid #cce7d0;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+
+#banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("canva/bf.png");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+}
+
+button.normal{
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 30px;
+    margin-top: 140px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;  
+}
+
+button.white{
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 18px;
+    /* margin-top: 140px; */
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s;  
+}
+
+#banner button:hover{
+    background-color: #fffb00;
+    color: red;
+}
+
+#sm-banner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#sm-banner .banner-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("canva/b2.jpg");
+    min-width: 580px;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+}
+
+#sm-banner .banner-box2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("canva/b2.jpg");
+    min-width: 580px;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+}
+
+#sm-banner h4{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+}
+#sm-banner h2{
+    color: #fff;
+    font-size: 28px;
+    font-weight: 800;
+}
+#sm-banner span{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+
+#sm-banner .banner-box:hover button{
+    /* background: #088178; */
+    background: rgb(247, 9, 9);
+    border: 1px solid red;
+}
+
+#banner3{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 80px;
+}
+
+#banner3 .banner-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("canva/b2.jpg");
+    min-width: 30%;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+#banner3 .banner-box2{
+    background-image: url("canva/b2.jpg");
+}
+#banner3 .banner-box3{
+    background-image: url("canva/b2.jpg");
+}
+
+#banner3 h2{
+    color: #fff;
+    font-weight: 900;
+    font-size: 15px;
+}
+#banner3 h3{
+    color: #000000;
+    font-weight: 800;
+    font-size: 15px;
+}
+
+#newsletter{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    /* add dark image here */
+    background-image: url("canva/b.png"); 
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+    background-color: #041e42;
+}
+
+#newsletter h4{
+    font-weight: 22px;
+    font-weight: 700;
+    color: #fff;
+}
+#newsletter p{
+    font-weight: 22px;
+    font-weight: 600;
+    color: #818ea0;
+}
+
+#newsletter p span{
+    color: #ffbd27;
+}
+
+#newsletter .form{
+    display: flex;
+    width: 40%;
+}
+#newsletter input{
+    height: 3.125em;
+    padding: 0 1.25em;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#newsletter button{
+    background-color: #088178;
+    color: #fff;
+    white-space: nowrap;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+button.normal1{
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 30px;
+    /* margin-top: 1px; */
+    /* margin-left: 1px; */
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;  
+}
+
+.footer-logo{
+    width: 13%;
+    height: 13%;
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer .footer-logo{
+    margin-bottom: 30px;
+}
+
+footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+footer p{
+    font-size: 13px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+ footer .follow{
+    margin-top: 20px;
+ }
+
+ footer .follow i{
+    color: #465b52;
+    padding-right: 4px;
+    cursor: pointer;
+ }
+
+ footer .install .row img{
+    border: 1px solid #088178;
+    border-radius: 6px;
+ }
+
+ footer .install img{
+    margin: 10px 0 15px 0;
+ }
+
+ footer .follow i:hover,
+ footer a:hover{
+    color: #088178;
+ }
+
+ footer .copyright{
+    width: 100%;
+    text-align: center;
+ }
+
+
+ #page-header {
+    background-image: url("https://wallpaperaccess.com/full/2484120.jpg");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+ }
+
+ #page-header h2,a {
+    color: black;
+ }
+ 
+ #page-header p {
+    color: #fff;
+ }
+ 
+#pagination {
+    text-align: center;
+}
+
+#pagination a {
+    text-decoration: none;
+    background-color: #088178;
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+}
+
+#pagination a i {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+   
+    </style>
+    <!-- <link rel="stylesheet" href="shop.css"> -->
+    <script src="https://kit.fontawesome.com/99f1e9d380.js" crossorigin="anonymous"></script>
+  
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img id="logo" src="canva/piuL.png" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li> <a class = "active" href="home">Home</a></li>
+                <li> <a class = "active"  href="shop">Shop</a></li>
+                <li> <a href="about.html">About</a></li>
+                <li> <a href="contact.html">Contact</a></li>
+                <li> <a href="cart.html"><i class="fa-thin fa-arrow-right"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="page-header">
+        <h2>Super value deals</h2>
+        <p>Save more with coupons & up to 70% off!</p>
+    </section>
+   
+    <section id="product1" class="section-p1">
+        <div class="pro-container">
+            <div class="pro" onclick = "window.location.href='product/63lks8';">
+                <img src="pics/partyWear1.webp" alt="">
+                <div class="des">
+                    <span>Nike</span>
+                    <h5>Trendy One Piece</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>1400 Rs</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart"></i></a>
+            </div>
+            
+
+
+
+            <% for(var x=0; x<data.length ; x++){ %>
+
+
+                <div class="pro" onclick = "window.location.href='/product/<%= data[x]._id %>';">
+                    <img src="C:\Users\HP PC\OneDrive\Desktop\HTML\pics\shirt2.jpg" alt="">
+                    <div class="des">
+                        <span>nike</span>
+                        <h5><%= data[x].Item_name %></h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4><%= data[x].cost %> Rs</h4>
+                    </div>
+                    <a href="#"><i class="fal fa-shopping-cart"></i></a>
+                </div>
+        
+                <% } %>
+
+
+
+
+
+
+
+
+
+            <div class="pro" onclick = "window.location.href='sproduct2.html';">
+                <img src="C:\Users\HP PC\OneDrive\Desktop\HTML\pics\shirt2.jpg" alt="">
+                <div class="des">
+                    <span>Nike</span>
+                    <h5>Formal Shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>1000 Rs</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart"></i></a>
+            </div>
+            <div class="pro" onclick ="window.location.href='sproduct3.html';">
+                <img src="C:\Users\HP PC\OneDrive\Desktop\HTML\pics\tshirt3.jpeg" alt="">
+                <div class="des">
+                    <span>Nike</span>
+                    <h5>Classy Skirt-Top</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>1400 Rs</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart"></i></a>
+            </div>
+            <div class="pro" onclick ="window.location.href='sproduct4.html';">
+                <img src= "C:\Users\HP PC\OneDrive\Desktop\HTML\pics\skirt1.jpg"alt="">
+                <div class="des">
+                    <span>Nike</span>
+                    <h5>Classy Skirt-Top</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>1400 Rs</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart"></i></a>
+            </div>
+            <div class="pro" onclick ="window.location.href='sproduct5.html';">
+                <img src= "C:\Users\HP PC\OneDrive\Desktop\HTML\pics\fs2.webp"alt="">
+                <div class="des">
+                    <span>Nike</span>
+                    <h5>Classy Skirt-Top</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>1400 Rs</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart"></i></a>
+            </div>
+            <div class="pro" onclick ="window.location.href='sproduct6.html';">
+                <img src= "C:\Users\HP PC\OneDrive\Desktop\HTML\pics\th-removebg-preview.png" alt="">
+                <div class="des">
+                    <span>Nike</span>
+                    <h5>Classy Skirt-Top</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>1400 Rs</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart"></i></a>
+            </div>
+            <div class="pro" onclick ="window.location.href='sproduct7.html';">
+                <img src="C:\Users\HP PC\OneDrive\Desktop\HTML\pics\pant2.jpeg" alt="">
+                <div class="des">
+                    <span>Nike</span>
+                    <h5>Classy Skirt-Top</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>1400 Rs</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="canva/f2.jpg" alt="">
+                <div class="des">
+                    <span>Nike</span>
+                    <h5>Classy Skirt-Top</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>1400 Rs</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart"></i></a>
+            </div>
+
+      
+
+    <!-- <section id="banner" class="section-m1">
+        <button class="normal">Explore More</button>
+    </section> -->
+
+    
+            <div class="pro">
+                <img src="canva/f2.jpg" alt="">
+                <div class="des">
+                    <span>Nike</span>
+                    <h5>Classy Skirt-Top</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>1400 Rs</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart"></i></a>
+            </div>
+            
+            <div class="pro">
+                <img src="canva/f2.jpg" alt="">
+                <div class="des">
+                    <span>Nike</span>
+                    <h5>Classy Skirt-Top</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>1400 Rs</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="canva/f2.jpg" alt="">
+                <div class="des">
+                    <span>Nike</span>
+                    <h5>Classy Skirt-Top</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>1400 Rs</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="canva/f2.jpg" alt="">
+                <div class="des">
+                    <span>Nike</span>
+                    <h5>Classy Skirt-Top</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>1400 Rs</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="canva/f2.jpg" alt="">
+                <div class="des">
+                    <span>Nike</span>
+                    <h5>Classy Skirt-Top</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>1400 Rs</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="canva/f2.jpg" alt="">
+                <div class="des">
+                    <span>Nike</span>
+                    <h5>Classy Skirt-Top</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>1400 Rs</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="canva/f2.jpg" alt="">
+                <div class="des">
+                    <span>Nike</span>
+                    <h5>Classy Skirt-Top</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>1400 Rs</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="canva/f2.jpg" alt="">
+                <div class="des">
+                    <span>Nike</span>
+                    <h5>Classy Skirt-Top</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>1400 Rs</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart"></i></a>
+            </div>
+
+        </div>
+        
+    </section>
+
+    <section id = "pagination" class = "section-p1">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">
+            <i class="fa-sharp fa-solid fa-arrow-right"></i>
+        </a>
+    </section>
+
+
+
+
+    <!-- <section id="sm-banner" class="section-p1">
+        <div class="banner-box">
+            <h4>Crazy Deals</h4>
+            <h2>Buy 1 get 2 free</h2>
+            <span>The best classic dress on sale</span>
+            <button class="white">Learn More</button>
+        </div>
+        <div class="banner-box banner-box2">
+            <h4>Spring/Summer</h4>
+            <h2>Upcoming Season</h2>
+            <span>The best classic dress on sale</span>
+            <button class="white">Collection</button>
+        </div>
+    </section> -->
+
+    <!-- <section id="banner3">
+        <div class="banner-box">
+        <h2>SEASONSAL SALE</h2>
+        <h3>Winter collection -50% OFF</h3>
+        </div>
+        <div class="banner-box banner-box2">
+        <h2>NEW FOOTWEAR COLLECTION</h2>
+        <h3>Spring / Summer 2022</h3>
+        </div>
+        <div class="banner-box banner-box3">
+        <h2>T-SHIRTS</h2>
+        <h3>New Trendy Prints</h3>
+        </div>
+    </section> -->
+
+    <section id="newsletter" class="section-p1">
+        <div class="newstext">
+            <h3>Sign Up for Newsletters</h3>
+            <p>Get E-mail update about our latest shop and <span>Special offers.</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your Email Address">
+            <button class="normal1">Sign Up</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="footer-logo" src="canva/fl.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> Raj Labdhi Heritage, Koba Circle Behind Nidhi Petrol Pump</p>
+            <p><strong>Phone:</strong> +917892382737 / +916231283814</p>
+            <p><strong>Hours:</strong> 9:00 - 22:00, Mon - Sat</p>
+
+            <div class="follow">
+                <h4>follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign Up</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <!-- images remaining -->
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store Or Google Play</p>
+            <div class="row">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="" alt="">
+        </div>
+
+        <div class="copyright">
+            <p>© 2023, DBMS 268 Group 2 - PickItUp Website Made by smart people</p>
+        </div>
+
+
+    </footer>
+
+    <script src="piuScript.js"></script>
+</body>
+</html>
